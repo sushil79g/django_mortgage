@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'rkwiyyg_gne07hyx2$ud%l#g8_--3lqv0u_b=2_kjdfbuu*id='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = Fasle
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'mortgage.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['./templates'],
+        'DIRS': [ os.path.join(BASE_DIR, 'templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,8 +123,14 @@ STATIC_URL = '/static/'
 # STATIC_DIRS = 'static'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
-]
 
+]
+STATIC_ROOT = '/home/sushil79g/django_mortgage/static'
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    #'django.contrib.staticfiles.finders.AppDirectoriesFinder',    #causes verbose duplicate notifications in django 1.9
+)
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
