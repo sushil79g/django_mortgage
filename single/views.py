@@ -1,11 +1,18 @@
-from django.shortcuts import render
+from django.shortcuts import render,render_to_response
 from django.core.mail import EmailMessage
 from django.shortcuts import redirect
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from single.models import Blog
 # Create your views here.
 def index(request):
-    return render(request,'index.html',context={})
+    posts = Blog.objects.all().order_by('-id')[:3]
+    # abc = {'posts':posts}
+    # print(abc[0].title)
+    # print(abc)
+    
+    return render(request,'index.html',{'whatever':posts})
+    # return render_to_response()
 
 def mail(request):
     # print(request.POST.get('message'))

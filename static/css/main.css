@@ -2691,3 +2691,26 @@ p {
 .footer-text a, .footer-text i {
   color: #2482ff;
 }
+
+@media screen and (max-width: 780px){
+  .new-class{
+    padding-top: 326px
+  }
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: red;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: red;
+}
