@@ -38,7 +38,7 @@
 					<div class="header-wrap">
 						<div class="header-top d-flex justify-content-between align-items-center">
 							<div class="logo">
-								<a href="#home"><img style="width: 336px; padding-left: 0px;margin-left: 0px;" src={% static "img/logo.jpg" %} alt=""></a>
+								<a href="#home"><img style="padding-left: 0px;margin-left: 0px;" src={% static "img/logo.png" %} alt=""></a>
 							</div>
 							<div class="main-menubar d-flex align-items-center">
 								<nav class="hide">
@@ -46,6 +46,7 @@
 									<a href="#service">Services</a>
 									<a href="#appoinment">Contact Us</a>
 									<a href="#consultant">Consultants</a>
+									<a href="#demo">Acivities</a>
 								</nav>
 								<div class="menu-bar"><span class="lnr lnr-menu"></span></div>
 							</div>
@@ -69,7 +70,7 @@
 								<a href="#appoinment"><button class="primary-btn2 mt-20 text-uppercase ">Get Started<span class="lnr lnr-arrow-right"></span></button></a>
 							</div>
 							<div class="col-lg-6 d-flex align-self-end img-right">
-								<img class="img-fluid" src={% static "img/image.jpg" %} alt="">
+								<img class="img-fluid" src={% static "img/image.png" %} alt="">
 							</div>
 						</div>
 				</div>
@@ -218,7 +219,10 @@
 								      	<div class="content-details fadeIn-bottom">
 								      		<h4>Jwala Aryal</h4>
 								      		<p>
-								      			yaha details lekhne
+												JR & Solutions</br>
+												Mortgage Broker · March 2014 to present · Sydney, Australia</br>
+												SUITE 203, 76-78 LIVERPOOL STREET SYDNEY NSW 2000</br>
+												T: 02 8040 2487
 								      		</p>
 								      	</div>
 								    </a>
@@ -235,7 +239,9 @@
 								      	<div class="content-details fadeIn-bottom">
 								      		<h4>Suresh Rajbahak</h4>
 								      		<p>
-								      			yaha pani details lekhne pachi
+												JR & Solutions</br>
+												Managing Director · January 2014 to present · Sydney, Australia</br>
+												Real Estate Agent
 								      		</p>
 								      	</div>
 								    </a>
@@ -373,7 +379,9 @@
 					  <h1>{{pos.title}}</h1>
 				{% endif %}
 			{% endfor %} -->
-				<h1 style="text-align:center;">Recent post</h1>
+			<div style="background-color:#F9F9FF;">
+			<div class="container">
+			<h1 style="text-align:center;">Recent post</h1>
 			<div id="demo" class="carousel slide" data-ride="carousel" >
 
 					<!-- Indicators -->
@@ -389,23 +397,26 @@
 
 							{% for pos in whatever %}
 								{% if forloop.counter == 1 %}
-									<div class="carousel-item active">
+									<div class="carousel-item active text-center align-items-center ">
 										<p style='text-align:center;'>
 											<h3 style='text-align:center;'>{{pos.title}}</h3></p></br>
-											<h5 style='text-align:center;'>{{pos.content}}</h5>
+											<h5 style='text-align:center;'>{{pos.content}}</h5></br>
+											<a href="{{pos.url}}" target="_blank"><button type="button" class="btn btn-secondary btn-lg align-items-center">Goto Discussion</button></a>
 										</p>
 									</div>
 								{% else %}
-									<div class="carousel-item" style='text-align:center;'>
+									<div class="carousel-item text-center offset-md-4" style='text-align:center;'>
 											<p style='text-align:center;'>
 													<h3>{{pos.title}}</h3></p></br>
-													<h5>{{pos.content}}</h5>
+													<h5>{{pos.content}}</h5></br>
+													<a href="{{pos.url}}" target="_blank"><button type="button" class="btn btn-secondary btn-lg align-items-center">Goto Discussion</button></a>
 											</p>
 									</div>
 								{% endif %}
 							{% endfor %}
 					  </div>
-					  
+					
+  
 					  
 					  
 					  
@@ -422,6 +433,15 @@
 					  </a>
 				  </div>
 				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+				
 			  
 
 
@@ -436,7 +456,16 @@
 
 
 
-			<!-- start footer Area -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				<!-- start footer Area -->
 			<footer class="footer-area section-gap">
 				<div class="container">
 					<div class="row">

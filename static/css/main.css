@@ -2134,7 +2134,7 @@ nav a:hover {
 }
 
 .banner-area .fullscreen {
-  height: 726px !important;
+  height: 508px !important;
 }
 
 @media (max-width: 768px) {
@@ -2714,3 +2714,8 @@ p {
   font-size: 55px;
   color: red;
 }
+
+.carousel-control {
+  color: #bada55;
+}
+

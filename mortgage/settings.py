@@ -119,18 +119,24 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+# STATIC_URL = '/static/'
+# # STATIC_DIRS = 'static'
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "static"),
+
+# ]
+#STATIC_ROOT = '/home/sushil79g/django_mortgage/static'
+
 STATIC_URL = '/static/'
-# STATIC_DIRS = 'static'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+    )
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-]
-STATIC_ROOT = '/home/sushil79g/django_mortgage/static'
-
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    #'django.contrib.staticfiles.finders.AppDirectoriesFinder',    #causes verbose duplicate notifications in django 1.9
-)
+# STATICFILES_FINDERS = (
+#     'django.contrib.staticfiles.finders.FileSystemFinder',
+#     #'django.contrib.staticfiles.finders.AppDirectoriesFinder',    #causes verbose duplicate notifications in django 1.9
+# )
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
